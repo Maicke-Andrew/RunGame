@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.screen {
+    background: url('./assets/bg.jpg') no-repeat center;
+    background-size: 100vh;
+    margin: 0 auto;
+    width: 100vh;
+    height: 50vh;
+    border: 1px solid;
+    position: relative;
+    overflow: hidden;
+}
+
+.fire {
+    position: absolute;
+    width: 100px;
+    bottom: 0;
+    right: -100px;
+    /* right: 790px; */
+}
+
+.player {
+    position: absolute;
+    width: 100px;
+    bottom: 0px;
+}
+
+@keyframes fireAnimation {
+    from {
+        right: -0px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jumpAnimation {
+    from {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 80px;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
+
+@keyframes downAnimation {
+    from {
+        bottom: 0;
+    }
+
+    10% {
+        bottom: -1px;
+    }
+
+    90% {
+        bottom: -10px;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
+
+.score {
+    position: absolute;
+    color: red;
+    right: 0;
+}
+
+.gameOver {
+    position: absolute;
+    background-color: hsl(0, 0%, 100%, .3);
+    height: 120px;
+    width: 190px;
+    bottom: 100px;
+    left: 205px;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: red;
+}
+
+.bestScoreDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.hidden {
+    position: absolute;
+    visibility: hidden;
+}
+
+.visible {
+    position: absolute;
+    width: 100px;
+    top: 50px;
+}
